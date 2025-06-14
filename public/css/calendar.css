@@ -1,0 +1,263 @@
+/* シフトエリアスタイル */
+.shift-area {
+    height: 100%;
+}
+
+.shift-container {
+    background-color: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-lg);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* シフトヘッダー */
+.shift-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.shift-nav {
+    display: flex;
+    align-items: center;
+}
+
+.shift-nav h2 {
+    margin: 0 var(--spacing-md);
+    font-size: var(--font-size-xl);
+    color: var(--primary-color);
+}
+
+.btn-nav {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.btn-nav:hover {
+    background-color: var(--primary-dark);
+}
+
+.view-options {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.view-btn {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: all var(--transition-fast);
+}
+
+.view-btn:hover, .view-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* カレンダービュー */
+.calendar-view {
+    flex: 1;
+    overflow: auto;
+}
+
+/* 月間カレンダー */
+.month-calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.month-calendar th {
+    padding: var(--spacing-sm);
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.month-calendar td {
+    padding: 0;
+    border: 1px solid var(--border-color);
+    height: 100px;
+    vertical-align: top;
+}
+
+.calendar-date {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.date-header {
+    padding: var(--spacing-xs);
+    font-weight: 500;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-content {
+    padding: var(--spacing-xs);
+    flex: 1;
+}
+
+.date-number {
+    font-size: var(--font-size-md);
+}
+
+.date-number.today {
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+
+.date-number.weekend {
+    color: var(--error-color);
+}
+
+/* 週間カレンダー */
+.week-calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.week-calendar th {
+    padding: var(--spacing-sm);
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.week-calendar td {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    height: 50px;
+}
+
+.week-calendar .time-slot {
+    font-weight: 500;
+    width: 80px;
+    text-align: center;
+}
+
+/* シフトステータス */
+.shift-status {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-xs);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.shift-status:hover {
+    filter: brightness(1.1);
+}
+
+.shift-status.早番 {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #bbdefb;
+}
+
+.shift-status.遅番 {
+    background-color: #fff8e1;
+    color: #ff8f00;
+    border: 1px solid #ffe082;
+}
+
+.shift-status.振替 {
+    background-color: #e8f5e9;
+    color: #388e3c;
+    border: 1px solid #c8e6c9;
+}
+
+.shift-status.特休 {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+    border: 1px solid #e1bee7;
+}
+
+.shift-status.社外 {
+    background-color: #eeeeee;
+    color: #616161;
+    border: 1px solid #bdbdbd;
+}
+
+.shift-comment {
+    font-size: var(--font-size-xs);
+    color: var(--text-light);
+    margin-top: var(--spacing-xs);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* シフトフォーム */
+.shift-form {
+    background-color: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: var(--spacing-lg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    z-index: 100;
+}
+
+.shift-form h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+}
+
+/* オーバーレイ */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 767px) {
+    .shift-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .view-options {
+        margin-top: var(--spacing-sm);
+    }
+    
+    .month-calendar td {
+        height: 80px;
+    }
+    
+    .shift-form {
+        width: 90%;
+    }
+} 

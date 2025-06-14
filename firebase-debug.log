@@ -1,0 +1,148 @@
+[debug] [2025-06-10T04:42:52.282Z] ----------------------------------------------------------------------
+[debug] [2025-06-10T04:42:52.287Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\oshiro45980\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only hosting
+[debug] [2025-06-10T04:42:52.287Z] CLI Version:   14.6.0
+[debug] [2025-06-10T04:42:52.288Z] Platform:      win32
+[debug] [2025-06-10T04:42:52.288Z] Node Version:  v22.14.0
+[debug] [2025-06-10T04:42:52.288Z] Time:          Tue Jun 10 2025 13:42:52 GMT+0900 (日本標準時)
+[debug] [2025-06-10T04:42:52.288Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-10T04:42:52.806Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-10T04:42:52.807Z] > authorizing via signed-in user (sssssk1515@gmail.com)
+[debug] [2025-06-10T04:42:52.808Z] [iam] checking project chat-v0-653b5 for permissions ["firebase.projects.get"]
+[debug] [2025-06-10T04:42:52.809Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:42:52.810Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:42:52.811Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-v0-653b5:testIamPermissions [none]
+[debug] [2025-06-10T04:42:52.811Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-v0-653b5:testIamPermissions x-goog-quota-user=projects/chat-v0-653b5
+[debug] [2025-06-10T04:42:52.811Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-v0-653b5:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-10T04:42:53.535Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-v0-653b5:testIamPermissions 200
+[debug] [2025-06-10T04:42:53.535Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-v0-653b5:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-06-10T04:42:53.536Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:42:53.536Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:42:53.536Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-v0-653b5/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-06-10T04:42:53.536Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-v0-653b5/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/chat-v0-653b5
+[debug] [2025-06-10T04:42:53.963Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-v0-653b5/services/cloudresourcemanager.googleapis.com 200
+[debug] [2025-06-10T04:42:53.963Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-v0-653b5/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-06-10T04:42:53.964Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:42:53.964Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:42:53.964Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/chat-v0-653b5 [none]
+[debug] [2025-06-10T04:42:54.160Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/chat-v0-653b5 200
+[debug] [2025-06-10T04:42:54.161Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/chat-v0-653b5 {"projectNumber":"683279592541","projectId":"chat-v0-653b5","lifecycleState":"ACTIVE","name":"chat-v0","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-06-09T09:54:07.288144Z"}
+[debug] [2025-06-10T04:42:54.164Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:42:54.164Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:42:54.164Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/chat-v0-653b5/sites 
+[debug] [2025-06-10T04:42:54.848Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/chat-v0-653b5/sites 200
+[debug] [2025-06-10T04:42:54.848Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/chat-v0-653b5/sites {"sites":[{"name":"projects/chat-v0-653b5/sites/chat-v0-653b5","defaultUrl":"https://chat-v0-653b5.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-10T04:42:54.848Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:42:54.848Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:42:54.849Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-v0-653b5/webApps/-/config [none]
+[debug] [2025-06-10T04:42:55.726Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-v0-653b5/webApps/-/config 200
+[debug] [2025-06-10T04:42:55.726Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-v0-653b5/webApps/-/config {"projectId":"chat-v0-653b5","appId":"1:683279592541:web:2b8862e297fb3902b5b1b4","databaseURL":"https://chat-v0-653b5-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"chat-v0-653b5.firebasestorage.app","apiKey":"AIzaSyDGg47qd2a-TXjzEwRBOjZsHVolav7pj4Y","authDomain":"chat-v0-653b5.firebaseapp.com","messagingSenderId":"683279592541","measurementId":"G-RDX525JCJ2"}
+[debug] [2025-06-10T04:42:55.736Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:42:55.736Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:42:55.737Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-v0-653b5 [none]
+[debug] [2025-06-10T04:42:56.028Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-v0-653b5 200
+[debug] [2025-06-10T04:42:56.028Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-v0-653b5 {"projectId":"chat-v0-653b5","projectNumber":"683279592541","displayName":"chat-v0","name":"projects/chat-v0-653b5","resources":{"hostingSite":"chat-v0-653b5","realtimeDatabaseInstance":"chat-v0-653b5-default-rtdb"},"state":"ACTIVE","etag":"1_ddb155d3-b330-4d2b-b53f-4d600c726e3c"}
+[info] i  hosting[chat-v0-653b5]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting[chat-v0-653b5]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [10/Jun/2025:04:42:59 +0000] "GET /css/style.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [10/Jun/2025:04:42:59 +0000] \"GET /css/style.css HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [10/Jun/2025:04:42:59 +0000] "GET /css/chat.css HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [10/Jun/2025:04:42:59 +0000] \"GET /css/chat.css HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [10/Jun/2025:04:42:59 +0000] "GET /js/chat.js HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [10/Jun/2025:04:42:59 +0000] \"GET /js/chat.js HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [10/Jun/2025:04:42:59 +0000] "GET /js/auth.js HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [10/Jun/2025:04:42:59 +0000] \"GET /js/auth.js HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36\""}}
+[debug] [2025-06-10T04:43:19.545Z] ----------------------------------------------------------------------
+[debug] [2025-06-10T04:43:19.551Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\oshiro45980\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-06-10T04:43:19.552Z] CLI Version:   14.6.0
+[debug] [2025-06-10T04:43:19.552Z] Platform:      win32
+[debug] [2025-06-10T04:43:19.552Z] Node Version:  v22.14.0
+[debug] [2025-06-10T04:43:19.552Z] Time:          Tue Jun 10 2025 13:43:19 GMT+0900 (日本標準時)
+[debug] [2025-06-10T04:43:19.553Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-10T04:43:20.073Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-10T04:43:20.074Z] > authorizing via signed-in user (sssssk1515@gmail.com)
+[debug] [2025-06-10T04:43:20.074Z] [iam] checking project chat-v0-653b5 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-06-10T04:43:20.076Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:20.076Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:20.077Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-v0-653b5:testIamPermissions [none]
+[debug] [2025-06-10T04:43:20.078Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-v0-653b5:testIamPermissions x-goog-quota-user=projects/chat-v0-653b5
+[debug] [2025-06-10T04:43:20.078Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-v0-653b5:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-10T04:43:20.841Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-v0-653b5:testIamPermissions 200
+[debug] [2025-06-10T04:43:20.841Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-v0-653b5:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-10T04:43:20.842Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:20.842Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:20.842Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-v0-653b5 [none]
+[debug] [2025-06-10T04:43:21.214Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-v0-653b5 200
+[debug] [2025-06-10T04:43:21.214Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-v0-653b5 {"projectId":"chat-v0-653b5","projectNumber":"683279592541","displayName":"chat-v0","name":"projects/chat-v0-653b5","resources":{"hostingSite":"chat-v0-653b5","realtimeDatabaseInstance":"chat-v0-653b5-default-rtdb"},"state":"ACTIVE","etag":"1_ddb155d3-b330-4d2b-b53f-4d600c726e3c"}
+[info] 
+[info] === Deploying to 'chat-v0-653b5'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-06-10T04:43:21.223Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:21.223Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:21.223Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-v0-653b5/versions [none]
+[debug] [2025-06-10T04:43:21.223Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-v0-653b5/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-06-10T04:43:22.225Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-v0-653b5/versions 200
+[debug] [2025-06-10T04:43:22.225Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-v0-653b5/versions {"name":"projects/683279592541/sites/chat-v0-653b5/versions/e9060765083391c5","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[chat-v0-653b5]: beginning deploy... 
+[info] i  hosting[chat-v0-653b5]: found 11 files in public 
+[debug] [2025-06-10T04:43:22.315Z] [hosting] uploading with 200 concurrency
+[debug] [2025-06-10T04:43:22.389Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:22.389Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:22.418Z] [hosting] hash cache [cHVibGlj] stored for 11 files
+[debug] [2025-06-10T04:43:22.418Z] [hosting][hash queue][FINAL] {"max":32,"min":1,"avg":3.8181818181818183,"active":0,"complete":11,"success":11,"errored":0,"retried":0,"total":11,"elapsed":66}
+[debug] [2025-06-10T04:43:22.418Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/683279592541/sites/chat-v0-653b5/versions/e9060765083391c5:populateFiles [none]
+[debug] [2025-06-10T04:43:22.419Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/683279592541/sites/chat-v0-653b5/versions/e9060765083391c5:populateFiles {"files":{"/index.html":"dc8413ef09640dac6a519ec6906f3504d2e511bc34b5ae38c31c111c682655ae","/js/utils.js":"b111c1eb0ed3d100f71aed21e958e38daef67223a299b43cffab9b7ff530de3e","/js/shift.js":"e3c11ebe216b4026c8696da8281ddb63c538591e67374aeeffdc9030c0143cc6","/js/database.js":"d8b2a6e410cc57af2f95bac7b22fcfb95cc584a04431d00385b46a481db2e272","/js/chat.js":"bc33129c66b5af184e73ec0ef14dc763249e0969144b457acb25e94fd33db35e","/js/auth.js":"1a780c0a4ff181353e0ab806704b78f4c3f4a67f487961e3eb103683937c71ea","/js/app.js":"197f948d675742220f6355d20b681728923d70fb6c401fa7306e61689475389a","/css/style.css":"1f13016ca375f9d2d70962c6fa331d1fa2bae2d21ec0f16eb4d98f8182ef01b3","/css/calendar.css":"dcb3f0e61cf28f2b0073c2148af2c2cf21c04c63024aca5d85133722994a6c84","/assets/images/default-avatar.png":"a84787dfa72366679d2f14470a0cceae8e22d8c842e37f7e8038b2f8a445a681","/css/chat.css":"46ff122d03078230d04e2ca9a08acda0e564c8edef51a562164e909b0880398a"}}
+[debug] [2025-06-10T04:43:22.993Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/683279592541/sites/chat-v0-653b5/versions/e9060765083391c5:populateFiles 200
+[debug] [2025-06-10T04:43:22.993Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/683279592541/sites/chat-v0-653b5/versions/e9060765083391c5:populateFiles {"uploadRequiredHashes":["46ff122d03078230d04e2ca9a08acda0e564c8edef51a562164e909b0880398a"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/chat-v0-653b5/versions/e9060765083391c5/files"}
+[debug] [2025-06-10T04:43:22.994Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:22.994Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:22.994Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-v0-653b5/versions/e9060765083391c5/files/46ff122d03078230d04e2ca9a08acda0e564c8edef51a562164e909b0880398a [none]
+[debug] [2025-06-10T04:43:22.994Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-v0-653b5/versions/e9060765083391c5/files/46ff122d03078230d04e2ca9a08acda0e564c8edef51a562164e909b0880398a [stream]
+[debug] [2025-06-10T04:43:22.996Z] [hosting][populate queue][FINAL] {"max":605,"min":605,"avg":605,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":607}
+[debug] [2025-06-10T04:43:22.996Z] [hosting] uploads queued: 1
+[debug] [2025-06-10T04:43:24.286Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-v0-653b5/versions/e9060765083391c5/files/46ff122d03078230d04e2ca9a08acda0e564c8edef51a562164e909b0880398a 200
+[debug] [2025-06-10T04:43:24.286Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/chat-v0-653b5/versions/e9060765083391c5/files/46ff122d03078230d04e2ca9a08acda0e564c8edef51a562164e909b0880398a [stream]
+[debug] [2025-06-10T04:43:24.286Z] [hosting][upload queue][FINAL] {"max":1293,"min":1293,"avg":1293,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1293}
+[info] +  hosting[chat-v0-653b5]: file upload complete 
+[debug] [2025-06-10T04:43:24.288Z] [hosting] deploy completed after 2057ms
+[debug] [2025-06-10T04:43:24.288Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "chat-v0-653b5"
+    },
+    "version": "projects/683279592541/sites/chat-v0-653b5/versions/e9060765083391c5"
+  }
+]
+[info] i  hosting[chat-v0-653b5]: finalizing version... 
+[debug] [2025-06-10T04:43:24.290Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:24.290Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:24.291Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-v0-653b5/versions/e9060765083391c5 updateMask=status%2Cconfig
+[debug] [2025-06-10T04:43:24.291Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-v0-653b5/versions/e9060765083391c5 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2025-06-10T04:43:24.895Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-v0-653b5/versions/e9060765083391c5 200
+[debug] [2025-06-10T04:43:24.895Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-v0-653b5/versions/e9060765083391c5 {"name":"projects/683279592541/sites/chat-v0-653b5/versions/e9060765083391c5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-06-10T04:43:21.958342Z","createUser":{"email":"sssssk1515@gmail.com"},"finalizeTime":"2025-06-10T04:43:24.781506Z","finalizeUser":{"email":"sssssk1515@gmail.com"}}
+[debug] [2025-06-10T04:43:24.895Z] [hosting] finalized version for chat-v0-653b5:[object Object]
+[info] +  hosting[chat-v0-653b5]: version finalized 
+[info] i  hosting[chat-v0-653b5]: releasing new version... 
+[debug] [2025-06-10T04:43:24.896Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:24.896Z] Checked if tokens are valid: true, expires at: 1749532217239
+[debug] [2025-06-10T04:43:24.896Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-v0-653b5/channels/live/releases versionName=projects%2F683279592541%2Fsites%2Fchat-v0-653b5%2Fversions%2Fe9060765083391c5
+[debug] [2025-06-10T04:43:24.897Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-v0-653b5/channels/live/releases {}
+[debug] [2025-06-10T04:43:25.344Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-v0-653b5/channels/live/releases 200
+[debug] [2025-06-10T04:43:25.344Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/chat-v0-653b5/channels/live/releases {"name":"projects/683279592541/sites/chat-v0-653b5/channels/live/releases/1749530604625000","version":{"name":"projects/683279592541/sites/chat-v0-653b5/versions/e9060765083391c5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-06-10T04:43:21.958342Z","createUser":{"email":"sssssk1515@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocL-Avhk6UEOya4IA1mcFE_dqL7pFrOkglyXFc078JH2JcY0=mo"},"finalizeTime":"2025-06-10T04:43:24.781506Z","finalizeUser":{"email":"sssssk1515@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocL-Avhk6UEOya4IA1mcFE_dqL7pFrOkglyXFc078JH2JcY0=mo"}},"type":"DEPLOY","releaseTime":"2025-06-10T04:43:24.625Z","releaseUser":{"email":"sssssk1515@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocL-Avhk6UEOya4IA1mcFE_dqL7pFrOkglyXFc078JH2JcY0=mo"}}
+[debug] [2025-06-10T04:43:25.345Z] [hosting] release: {"name":"projects/683279592541/sites/chat-v0-653b5/channels/live/releases/1749530604625000","version":{"name":"projects/683279592541/sites/chat-v0-653b5/versions/e9060765083391c5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-06-10T04:43:21.958342Z","createUser":{"email":"sssssk1515@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocL-Avhk6UEOya4IA1mcFE_dqL7pFrOkglyXFc078JH2JcY0=mo"},"finalizeTime":"2025-06-10T04:43:24.781506Z","finalizeUser":{"email":"sssssk1515@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocL-Avhk6UEOya4IA1mcFE_dqL7pFrOkglyXFc078JH2JcY0=mo"}},"type":"DEPLOY","releaseTime":"2025-06-10T04:43:24.625Z","releaseUser":{"email":"sssssk1515@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocL-Avhk6UEOya4IA1mcFE_dqL7pFrOkglyXFc078JH2JcY0=mo"}}
+[info] +  hosting[chat-v0-653b5]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/chat-v0-653b5/overview
+[info] Hosting URL: https://chat-v0-653b5.web.app
