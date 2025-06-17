@@ -97,6 +97,23 @@ const Database = {
     },
     
     /**
+     * メッセージの既読状態をリアルタイムで監視
+     * @param {string} messageId - メッセージID
+     * @param {Function} callback - コールバック関数
+     * @returns {Function} - リスナーの解除関数
+     */
+    onMessageReadStatusChange: function(messageId, callback) {
+        const readByRef = db.ref(`messages/${messageId}/readBy`);
+        const listener = readByRef.on('value', (snapshot) => {
+            const readBy = snapshot.val() || {};
+            callback(readBy);
+        });
+        
+        // リスナーの解除関数を返す
+        return () => readByRef.off('value', listener);
+    },
+    
+    /**
      * メッセージの編集
      * @param {string} messageId - メッセージID
      * @param {string} content - 新しいメッセージ内容

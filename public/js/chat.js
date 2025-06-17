@@ -24,6 +24,11 @@ const Chat = {
     currentMentionIndex: -1,
     
     /**
+     * 既読ステータスリスナー
+     */
+    readStatusListeners: {},
+    
+    /**
      * 初期化処理
      * @returns {Promise}
      */
@@ -104,6 +109,9 @@ const Chat = {
             this.messageListener(); // リスナーを解除
             this.messageListener = null;
         }
+        
+        // 既読ステータスリスナーをクリーンアップ
+        this.cleanupReadStatusListeners();
     },
     
     /**
@@ -392,6 +400,7 @@ const Chat = {
         const messageElement = document.createElement('div');
         messageElement.className = `message ${isSelf ? 'self' : ''}`;
         messageElement.id = `message-${message.id}`;
+        messageElement.dataset.senderId = message.senderId;
         
         // メッセージのHTML構造
         messageElement.innerHTML = `
@@ -424,6 +433,98 @@ const Chat = {
         // 自分が送信していないメッセージは既読にする
         if (!isSelf && Auth.currentUser) {
             Database.markMessageAsRead(message.id, Auth.currentUser.uid);
+        }
+        
+        // 既読ステータスを更新
+        this.updateReadStatus(messageElement, message);
+        
+        // 自分のメッセージの場合は既読状態を監視
+        if (isSelf) {
+            this.watchMessageReadStatus(message.id);
+        }
+    },
+    
+    /**
+     * 既読ステータスの更新
+     * @param {HTMLElement} messageElement - メッセージ要素
+     * @param {Object} message - メッセージオブジェクト
+     */
+    updateReadStatus: function(messageElement, message) {
+        const readStatusElement = messageElement.querySelector('.message-read-status');
+        if (!readStatusElement || !Auth.currentUser) return;
+        
+        // 自分のメッセージの場合のみ既読状況を表示
+        const isSelf = message.senderId === Auth.currentUser.uid;
+        if (!isSelf) return;
+        
+        // 既読ユーザーの数を計算
+        const readBy = message.readBy || {};
+        const readUserIds = Object.keys(readBy).filter(uid => readBy[uid] && uid !== Auth.currentUser.uid);
+        const readCount = readUserIds.length;
+        
+        if (readCount === 0) {
+            readStatusElement.innerHTML = '<i class="fas fa-check" style="color: #999;"></i> 未読';
+        } else {
+            readStatusElement.innerHTML = `<i class="fas fa-check-double" style="color: #4CAF50;"></i> 既読 ${readCount}人`;
+            
+            // 既読ユーザーの詳細を表示（ホバー時）
+            this.addReadStatusTooltip(readStatusElement, readUserIds);
+        }
+    },
+    
+    /**
+     * 既読ステータスのツールチップを追加
+     * @param {HTMLElement} element - 既読ステータス要素
+     * @param {Array} readUserIds - 既読ユーザーIDの配列
+     */
+    addReadStatusTooltip: function(element, readUserIds) {
+        // 既読ユーザーの名前を取得
+        const readUserNames = readUserIds.map(uid => {
+            const user = this.userCache[uid];
+            return user ? user.displayName : '不明なユーザー';
+        });
+        
+        if (readUserNames.length > 0) {
+            element.title = `既読: ${readUserNames.join(', ')}`;
+        }
+    },
+    
+    /**
+     * メッセージの既読状態を監視（リアルタイム更新用）
+     * @param {string} messageId - メッセージID
+     */
+    watchMessageReadStatus: function(messageId) {
+        if (!Auth.currentUser) return;
+        
+        const cleanup = Database.onMessageReadStatusChange(messageId, (readBy) => {
+            const messageElement = document.getElementById(`message-${messageId}`);
+            
+            if (messageElement) {
+                // メッセージオブジェクトを再構築
+                const message = {
+                    id: messageId,
+                    senderId: messageElement.dataset.senderId || Auth.currentUser.uid,
+                    readBy: readBy
+                };
+                
+                this.updateReadStatus(messageElement, message);
+            }
+        });
+        
+        // クリーンアップ用にリスナーを保存
+        if (!this.readStatusListeners) {
+            this.readStatusListeners = {};
+        }
+        this.readStatusListeners[messageId] = cleanup;
+    },
+    
+    /**
+     * 全ての既読ステータスリスナーをクリーンアップ
+     */
+    cleanupReadStatusListeners: function() {
+        if (this.readStatusListeners) {
+            Object.values(this.readStatusListeners).forEach(cleanup => cleanup());
+            this.readStatusListeners = {};
         }
     },
     

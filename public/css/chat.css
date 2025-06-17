@@ -159,6 +159,25 @@
     font-size: 0.65rem;
     color: var(--text-light);
     margin-top: 1px;
+    cursor: pointer;
+    user-select: none;
+    transition: color var(--transition-fast);
+}
+
+.message-read-status:hover {
+    color: var(--primary-color);
+}
+
+.message-read-status i {
+    margin-right: 2px;
+}
+
+.read-check {
+    color: #999;
+}
+
+.read-check-double {
+    color: #4CAF50;
 }
 
 .message-mention {
